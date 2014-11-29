@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#08162123">
+
+
+    <!--Avatar View -->
+    <com.android.volley.toolbox.NetworkImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/avatarThumbnail"
+        android:layout_marginLeft="10dp"
+        android:background="#ded"
+        android:layout_marginTop="14dp"
+        android:padding="13dp"
+        />
+
+    <TextView
+        android:id="@+id/userName"
+        android:text="Username:"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/CornflowerBlue"
+        android:textSize="@dimen/avatar_name"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@id/avatarThumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/timeStamp"
+        android:layout_below="@id/userName"
+        android:textSize="@dimen/time_stamp"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@id/avatarThumbnail"
+        android:textColor="@color/Gray"
+        android:text="timestamp"
+        android:layout_marginTop="6dp"
+        android:textStyle="italic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/userSince"
+        android:layout_below="@id/timeStamp"
+        android:text="User since 2012"
+        android:textStyle="italic"
+        android:layout_toRightOf="@id/avatarThumbnail"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/DarkGray"
+        android:textSize="@dimen/small_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/userLocation"
+        android:layout_marginLeft="14dp"
+
+        android:layout_below="@id/userSince"
+        android:layout_marginTop="2dp"
+        android:text="Location:"
+        android:layout_toRightOf="@id/avatarThumbnail"
+        android:textColor="@color/DarkGray"
+        android:textSize="@dimen/small_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!--The bottom View -->
+
+    <View
+        android:id="@+id/separator"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/avatarThumbnail"
+        android:background="@color/CornflowerBlue"
+        android:layout_marginLeft="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp" />
+
+    <TextView
+        android:id="@+id/tweetTitle"
+        android:layout_below="@id/separator"
+        android:text="Tweet"
+        android:layout_marginTop="15dp"
+        android:textSize="@dimen/big_title"
+        android:layout_marginLeft="14dp"
+        android:textColor="@color/DarkGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- Tweet scrollView -->
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_below="@id/tweetTitle"
+        android:layout_marginTop="9dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/CornflowerBlue"
+        android:layout_width="310dp"
+        android:layout_height="129dp">
+
+
+        <TextView
+            android:textAlignment="center"
+            android:textSize="@dimen/time_stamp"
+            android:textColor="@color/DimGray"
+            android:id="@+id/tweet"
+            android:text="My tweet goes here and keeps the size "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        </ScrollView>
+
+    <!--Buttons -->
+
+    <Button
+        android:id="@+id/favButton"
+        android:text="Fav"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/rtButton"
+        android:text="Retweet"
+        android:layout_toRightOf="@id/favButton"
+
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
